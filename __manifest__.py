@@ -24,7 +24,7 @@
 
     # always loaded
     'data': [
-        'views/tagre_dashboard_views.xml'
+        'views/tagre_dashboard_views.xml',
     ],
     'assets':{
         'web.assets_backend':[
@@ -32,9 +32,11 @@
             'tagre_dashboard/static/src/js/tagre_dashboard.js',
             'tagre_dashboard/static/src/css/tagre_dashboard.css',
             'tagre_dashboard/static/src/js/monthly_goals.js',
+            #'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js',
+            'https://cdn.jsdelivr.net/npm/chart.js'
             #'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js'
-            'https://cdn.jsdelivr.net/npm/chart.js',
-            'https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels'
+            #'https://cdn.jsdelivr.net/npm/chart.js',
+            #'https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels'
         ]
     }
 }

@@ -10,6 +10,10 @@ class AccountMove(models.Model):
         self.env.cr.execute("""
                             SELECT  t9.name as company_name,t1.id,t1.date, t1.name as move_name,t1.move_type,t6.vat, t6.name as partner_name, t5.name as categ_name, t2.name as product_name,
                                 CASE
+                                    WHEN t1.move_type = 'out_refund' THEN (t2.quantity)*-1
+                                    ELSE t2.quantity
+                                END AS quantity,
+                                CASE
                                     WHEN t1.move_type = 'out_invoice' AND t1.currency_id = 154 THEN (t2.price_total)
                                     WHEN t1.move_type = 'out_invoice' AND t1.currency_id = 2 THEN (t2.price_total)*(1/t8.rate)
                                     WHEN t1.move_type = 'out_refund' AND t1.currency_id = 154 THEN (t2.price_total)*-1
@@ -32,4 +36,12 @@ class AccountMove(models.Model):
                             ORDER BY DATE_TRUNC('month',t1.date)
                             """)
         res = self.env.cr.dictfetchall()
+        
+        amount_month = {}
+        for item in res:
+            month = str(item['date'].month)
+            value = item['price_total']
+            amount_month[month] = amount_month.get(month,0)+ value
+        print(amount_month)
+        
         return res
