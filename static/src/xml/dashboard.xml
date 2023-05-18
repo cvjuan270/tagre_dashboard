@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="income_template" xml:space="preserve">
+    <t t-name="tmpl_income_dashboard">
+        <div>
+            <div class="o_control_panel">
+                <h2>Dashboard de ingeresos</h2>
+                <!-- <div class="row">
+                    <div class="col-2">
+                        <label for="date_from">Fecha de Inicio</label>
+                        <input type="date" id="date_from" name="date_from"/>
+                    </div>
+                    <div class="col-2">
+                        <label for="date_to">Fecha de fin</label>
+                        <input type="date" id="date_to" name="date_to"/>
+                    </div>
+                </div> -->
+            </div>
+            <div class="o_content">
+
+                <div class="row mx-2">
+                    <!-- Facturacion Mensual-->
+                    <div class="col-xl-3 col-sm-6 mb-xl-2 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="numbers">
+                                            <p class="text-sm mb-0 text-info">Facturación (Mensual)</p>
+                                            <h1 id="invoicing_income_month" class="text-primary">0.00</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facturacion Anual-->
+                    <div class="col-xl-3 col-sm-6 mb-xl-2 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="numbers">
+                                            <p class="text-sm mb-0 text-info">Facturación (Anual)</p>
+                                            <h1 id="invoice_income_year" class="text-primary">S/ 0.00</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facturacion SOP Mensual-->
+                    <div class="col-xl-3 col-sm-6 mb-xl-2 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="numbers">
+                                            <p class="text-sm mb-0 text-info">Facturación SOP(Mensual)</p>
+                                            <h1 id="sop_income_month" class="text-primary">-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facturacion SOP anual-->
+                    <div class="col-xl-3 col-sm-6 mb-xl-2 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="numbers">
+                                            <p class="text-sm mb-0 text-info">Facturación SOP(Anual)</p>
+                                            <h1 id="sop_income_year" class="text-primary">-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- comparativo objetivo con resultados-->
+                <div class="row mx-2">
+                    <div class="col-xl-9 col-sm-8 mb-xl-2 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="monthly_goal_chart"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 mb-xl-2 mb-4">
+                        <div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <canvas id="probability_success_chart"/>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <canvas id="probability_success_chart1"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ingresos por categorias-->
+                <div class="row mx-2">
+                    <div class="col-xl-4 col-sm-6 mb-xl-2 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="income_categ_chart"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </t>
+</templates>

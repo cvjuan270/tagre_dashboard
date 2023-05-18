@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_tagre_dashboard_income" model="ir.actions.client">
+            <field name="name">Dashboard</field>
+            <field name="tag">tagre_dashboard_income</field>
+        </record>
+
+        <menuitem
+            id="tagre_dashboard_menu"
+            name="Dasboard CMS"
+            parent="spreadsheet_dashboard.spreadsheet_dashboard_menu_root"
+            sequence="10"/>
+        <menuitem
+            id="tagre_dashboard_income_menu"
+            name="Ingresos"
+            action="action_tagre_dashboard_income"
+            parent="tagre_dashboard_menu"/>
+        </data>
+</odoo>
